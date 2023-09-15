@@ -1,0 +1,20 @@
+.subscribe {
+    transform: translateY(50%);
+    &-container {
+        border-radius: 10px;
+        background: #FFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 58px 70px;
+        box-shadow: 0px 34px 57px rgba(13, 16, 37, 0.06);
+    }
+
+    &-header {
+        max-width: 555px;
+    }
+
+    .heading {
+        max-width: 372px;
+    }
+}

@@ -1,0 +1,104 @@
+.plan {
+    padding-top: 80px;
+    // background-color: $gray-light-color;
+    background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0.00) 88.56%);
+
+    &-header {
+        text-align: center;
+        margin: 0 auto 60px;
+        max-width: 555px;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 50px;
+    }
+
+    &-item {
+        border-radius: 10px;
+        border: 2px solid #DDD;
+        background: #FFF;
+        padding: 80px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-item.active,
+    &-item:hover {
+        border-color: $primary-color;
+
+        .btn {
+            background-color: $primary-color;
+            color: #fff;
+        }
+    }
+
+    &-img img {
+        margin: 0 auto 30px;
+    }
+
+    &-title {
+        font-size: 18px;
+        line-height: calc(30/18);
+        margin-bottom: 30px;
+    }
+
+    &-detail {
+        margin-bottom: 40px;
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 21px;
+        font-size: 14px;
+        line-height: calc(30 / 14);
+        margin-bottom: 10px;
+    }
+
+    &-price {
+        margin-top: auto;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: calc(30 / 25);
+    }
+
+    &-btn {
+        padding: 14px 64px;
+        line-height: inherit;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .plan {
+        padding-top: 50px;
+    }
+
+    .plan-list {
+    display: grid;
+    justify-content: flex-start;
+    grid-auto-columns: 300px;
+    grid-auto-flow: column;
+    grid-gap: 0 50px;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+    }
+    .plan-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    .plan-list > *{
+      scroll-snap-align: start;
+    }
+}
